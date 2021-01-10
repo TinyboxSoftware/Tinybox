@@ -121,6 +121,21 @@ export const aboutSection = {
     },
   },
 };
+
+// * Services Section
+export const servicesSection = {
+  title: 'Services Section',
+  name: 'servicesSection',
+  type: 'object',
+};
+
 // * Contact Me Section
 
 // * Showcase Section
+export const showcaseSection = {
+  title: 'Showcase Section',
+  name: 'showcaseSection',
+  type: 'object',
+  fields: [{}],
+  // see here for an example: https://tvp.nyc/team-rubicon/
+};

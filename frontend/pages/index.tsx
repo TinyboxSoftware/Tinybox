@@ -11,7 +11,42 @@ const Index = ({ pageContent }) => {
           case 'heroSection':
             return <Hero data={section} />;
           case 'aboutSection':
-            return <About data={section} />;
+            // return <About data={section} />;
+            return (
+              <div>
+                <div className="w-full">
+                  <h4 className="text-sm font-bold text-indigo-600 uppercase">
+                    OUR PROJECTS
+                  </h4>
+                  <h2 className="text-2xl font-bold">
+                    What we've been working on
+                  </h2>
+                  <p className="text-gray-700">
+                    Here's a few projects we've been working on lately
+                  </p>
+                </div>
+                <div className="flex gap-4 my-8 flex-cols">
+                  <article
+                    className="bg-yellow-200 w-96"
+                    style={{ height: '400px' }}
+                  >
+                    This is a project
+                  </article>
+                  <article
+                    className="bg-indigo-200 w-96"
+                    style={{ height: '400px' }}
+                  >
+                    This is a project
+                  </article>
+                  <article
+                    className="bg-green-200 w-96 "
+                    style={{ height: '400px' }}
+                  >
+                    This is a project
+                  </article>
+                </div>
+              </div>
+            );
           default:
             return;
         }

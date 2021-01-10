@@ -5,12 +5,13 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // We import object and document schemas
-import category from './category';
-import post from './post';
-import author from './author';
+import category from './blog/category';
+import post from './blog/post';
+import author from './blog/author';
 import homepage from './singletons/homepage';
 // import generic content
-import blockContent from './blockContent';
+import blockContent from './blog/blockContent';
+import testimonial from './testimonial';
 import { heroSection, aboutSection } from './layouts/sections';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -24,6 +25,7 @@ export default createSchema({
     author,
     category,
     blockContent,
+    testimonial,
     homepage,
     heroSection,
     aboutSection,
