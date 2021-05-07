@@ -29,7 +29,7 @@ const Newsletter = () => {
 
   return (
     <section className="w-full px-4 py-6 bg-gray-900">
-      <div className="flex flex-col w-full px-4 py-8 mx-auto bg-indigo-600 md:py-12 lg:grid lg:grid-cols-3 rounded-xl max-w-7xl">
+      <div className="flex flex-col w-full gap-4 px-4 py-8 mx-auto bg-indigo-600 md:py-12 lg:grid lg:grid-cols-3 rounded-xl max-w-7xl">
         {formState.status === 'success' ? (
           <div className="col-span-3 text-center">
             <p className="text-3xl font-extrabold tracking-tight text-white">
