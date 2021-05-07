@@ -59,7 +59,7 @@ export default function Example({ page, section }) {
           <div className="flex flex-row flex-wrap gap-12 py-4">
             <img
               className="w-auto h-12 md:h-16 filter invert grayscale brightness-900"
-              src="https://cdn.shopify.com/s/files/1/0583/1349/t/187/assets/vssl-logo-primary-black.svg?v=10491393282309023426"
+              src="https://res.cloudinary.com/tinbyox/image/upload/c_scale,w_164/v1620362857/Tinybox.dev/vssl-logo-primary-black_eqoaxs.svg"
               alt=""
             />
             <img
@@ -76,11 +76,11 @@ export default function Example({ page, section }) {
         </article>
         <div className="relative overflow-hidden md:right-0">
           <img
-            src="https://res.cloudinary.com/tinbyox/image/upload/v1620241602/Tinybox.dev/Card-Reader_sp3vil.png"
+            src="https://res.cloudinary.com/tinbyox/image/upload/f_auto,q_auto,w_400/v1620241602/Tinybox.dev/Card-Reader_sp3vil.png"
             className="absolute right-0 z-30 w-64 transition-all duration-300 transform top-6 hover:rotate-6 hover:scale-110"
           />
           <img
-            src="https://res.cloudinary.com/tinbyox/image/upload/v1620241610/Tinybox.dev/MacBook_ro4zfj.png"
+            src="https://res.cloudinary.com/tinbyox/image/upload/f_auto,q_auto,w_500/v1620241610/Tinybox.dev/MacBook_ro4zfj.png"
             className="z-20 transition-all duration-300 transform w-96 hover:rotate-6 hover:scale-110"
           />
         </div>
