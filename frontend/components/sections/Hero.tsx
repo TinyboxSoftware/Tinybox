@@ -11,7 +11,7 @@ type HeroProps = {
   };
 };
 
-export default function Example({ page, section }) {
+const Hero = ({ page, section }) => {
   return (
     <section className="w-full bg-gray-900 md:min-h-screen ">
       <div className="relative flex flex-col items-center justify-center px-4 py-6 mx-auto md:min-h-screen lg:justify-start lg:flex-row max-w-7xl">
@@ -49,7 +49,7 @@ export default function Example({ page, section }) {
             Hey I'm Mykal, and I run Tinybox!
           </p>
           <p className="mb-4 text-base font-normal text-gray-300">
-            I work with business in the Fraser Valley to create software
+            I work with businesses in the Fraser Valley to create software
             solutions to sales problems. Specializing in Shopify, and custom web
             solutions.
           </p>
@@ -60,17 +60,17 @@ export default function Example({ page, section }) {
             <img
               className="w-auto h-12 md:h-16 filter invert grayscale brightness-900"
               src="https://res.cloudinary.com/tinbyox/image/upload/c_scale,w_164/v1620362857/Tinybox.dev/vssl-logo-primary-black_eqoaxs.svg"
-              alt=""
+              alt="VSSL Gear Logo"
             />
             <img
               className="w-auto h-12 md:h-16 filter grayscale brightness-900"
               src="https://res.cloudinary.com/tinbyox/image/upload/v1620362077/Tinybox.dev/The_Daily_Market_Logo_hsjgpg.svg"
-              alt=""
+              alt="The Daily Market Logo"
             />
             <img
               className="w-auto h-12 md:h-16"
               src="https://cdn.sanity.io/images/gzpc0qdw/production/c93828f36c798864f4d03058996f9cf65ffd7a44-1200x602.png?w=420"
-              alt=""
+              alt="RF Properties Logo"
             />
           </div>
         </article>
@@ -78,37 +78,17 @@ export default function Example({ page, section }) {
           <img
             src="https://res.cloudinary.com/tinbyox/image/upload/f_auto,q_auto,w_400/v1620241602/Tinybox.dev/Card-Reader_sp3vil.png"
             className="absolute right-0 z-30 w-64 transition-all duration-300 transform top-6 hover:rotate-6 hover:scale-110"
+            alt="photo of card reader"
           />
           <img
             src="https://res.cloudinary.com/tinbyox/image/upload/f_auto,q_auto,w_500/v1620241610/Tinybox.dev/MacBook_ro4zfj.png"
             className="z-20 transition-all duration-300 transform w-96 hover:rotate-6 hover:scale-110"
+            alt="photo of macbook"
           />
         </div>
       </div>
     </section>
   );
-}
+};
 
-// const Hero: FunctionComponent<HeroProps> = ({ data }) => {
-//   return (
-//     <section className="my-8 lg:my-12">
-//       <div className="prose prose-indigo lg:prose-lg">
-//         <BlockContent blocks={data.content}></BlockContent>
-//       </div>
-//       <div className="flex flex-row">
-//         {data.cta_buttons.map((button) => {
-//           return (
-//             <a
-//               href={button.href}
-//               className="px-6 py-4 font-bold tracking-wider uppercase transition-all rounded text-tinyblue-100 bg-tinyblue-500 hover:bg-tinyblue-400 hover:text-white"
-//             >
-//               {button.content}
-//             </a>
-//           );
-//         })}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Hero;
+export default Hero;

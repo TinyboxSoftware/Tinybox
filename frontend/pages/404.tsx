@@ -1,6 +1,11 @@
+import Head from 'next/head';
+
 const FourOhFour = () => {
   return (
     <div className="grid w-full min-h-screen bg-gray-900 place-items-center">
+      <Head>
+        <title>Tinybox: 404</title>
+      </Head>
       <section className="px-4">
         <h1 className="block text-5xl font-extrabold leading-tight tracking-tight text-white md:text-6xl">
           404

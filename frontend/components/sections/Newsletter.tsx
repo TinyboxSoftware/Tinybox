@@ -45,7 +45,7 @@ const Newsletter = () => {
               <h3 className="text-3xl font-extrabold tracking-tight text-white ">
                 Newsletter
               </h3>
-              <p className="text-base text-indigo-300 md:text-lg">
+              <p className="text-base text-indigo-100 md:text-lg">
                 signup for our newsletter for updates on availability, new
                 product launches & everything Tinybox
               </p>
