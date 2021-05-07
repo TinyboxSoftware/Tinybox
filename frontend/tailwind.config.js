@@ -1,6 +1,7 @@
 // tailwind.config.js
 module.exports = {
   plugins: [require('@tailwindcss/typography')],
+  mode: 'jit',
   purge: {
     content: ['./src/**/*.html', './components/**/*.tsx', './pages/**/*.tsx'],
   },

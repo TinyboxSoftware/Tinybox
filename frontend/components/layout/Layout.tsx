@@ -1,12 +1,13 @@
-import Navbar from './nav/Navbar';
+import Footer from './Footer';
+import Navigation from './Navigation';
 
 const Layout = ({ children }) => {
   return (
-    <main>
-      <nav> {/* TODO add a navbar component */}</nav>
-      {children}
-      <footer>{/* TODO add a basic footer component */}</footer>
-    </main>
+    <div>
+      <Navigation />
+      <main className="min-h-screen">{children}</main>
+      <Footer />
+    </div>
   );
 };
 
