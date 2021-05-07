@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "netlify dev",
     "next-dev": "next dev",
-    "build": "next build",
-    "export": "next export"
+    "build": "next build"
   },
   "dependencies": {
     "@headlessui/react": "^1.0.0",

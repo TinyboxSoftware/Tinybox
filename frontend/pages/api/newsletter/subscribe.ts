@@ -19,6 +19,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     if (bdwnRes.status === 201) {
       res.status(201).json({ message: 'new subscriber created!' });
     } else {
+      console.log(await bdwnRes.json());
       res
         .status(400)
         .json({ message: 'already subscribed, or email is invalid' });
