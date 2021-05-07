@@ -36,32 +36,38 @@ const Hero = () => {
             </span>
           </h1>
           <p className="mt-6 mb-4 text-base font-normal text-gray-300">
-            Hey I'm Mykal, and I run Tinybox!
+            Hey, I'm Mykal, and I run Tinybox!
           </p>
           <p className="mb-4 text-base font-normal text-gray-300">
             I work with businesses in the Fraser Valley to create software
-            solutions to sales problems. Specializing in Shopify, and custom web
-            solutions.
+            solutions. I Specialzie in Shopify Development, and custom web
+            development.
           </p>
           <small className="py-6 text-sm font-bold tracking-wider text-gray-600 uppercase">
-            We've worked with
+            I've worked with
           </small>
           <div className="flex flex-row flex-wrap gap-12 py-4">
-            <img
-              className="w-auto h-12 md:h-16 filter invert grayscale brightness-900"
-              src="https://res.cloudinary.com/tinbyox/image/upload/c_scale,w_164/v1620362857/Tinybox.dev/vssl-logo-primary-black_eqoaxs.svg"
-              alt="VSSL Gear Logo"
-            />
-            <img
-              className="w-auto h-12 md:h-16 filter grayscale brightness-900"
-              src="https://res.cloudinary.com/tinbyox/image/upload/v1620362077/Tinybox.dev/The_Daily_Market_Logo_hsjgpg.svg"
-              alt="The Daily Market Logo"
-            />
-            <img
-              className="w-auto h-12 md:h-16"
-              src="https://cdn.sanity.io/images/gzpc0qdw/production/c93828f36c798864f4d03058996f9cf65ffd7a44-1200x602.png?w=420"
-              alt="RF Properties Logo"
-            />
+            <a href="https://vsslgear.com/">
+              <img
+                className="w-auto h-12 md:h-16 filter invert grayscale brightness-900"
+                src="https://res.cloudinary.com/tinbyox/image/upload/c_scale,w_164/v1620362857/Tinybox.dev/vssl-logo-primary-black_eqoaxs.svg"
+                alt="VSSL Gear Logo"
+              />
+            </a>
+            <a href="https://thedailymarket.ca">
+              <img
+                className="w-auto h-12 md:h-16 filter grayscale brightness-900"
+                src="https://res.cloudinary.com/tinbyox/image/upload/v1620362077/Tinybox.dev/The_Daily_Market_Logo_hsjgpg.svg"
+                alt="The Daily Market Logo"
+              />
+            </a>
+            <a href="https://rfproperties.ca">
+              <img
+                className="w-auto h-12 md:h-16"
+                src="https://cdn.sanity.io/images/gzpc0qdw/production/c93828f36c798864f4d03058996f9cf65ffd7a44-1200x602.png?w=420"
+                alt="RF Properties Logo"
+              />
+            </a>
           </div>
         </article>
         <div className="relative overflow-hidden md:right-0">
