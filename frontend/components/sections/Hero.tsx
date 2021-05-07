@@ -1,17 +1,7 @@
 import Link from 'next/link';
 import { ChevronRightIcon } from '@heroicons/react/outline';
 
-type HeroProps = {
-  page: any;
-  section: {
-    content: Array<any>;
-    cta_buttons: Array<any>;
-    _key: string;
-    _type: string;
-  };
-};
-
-const Hero = ({ page, section }) => {
+const Hero = () => {
   return (
     <section className="w-full bg-gray-900 md:min-h-screen ">
       <div className="relative flex flex-col items-center justify-center px-4 py-6 mx-auto md:min-h-screen lg:justify-start lg:flex-row max-w-7xl">
