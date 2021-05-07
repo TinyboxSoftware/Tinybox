@@ -56,7 +56,7 @@ const Navigation = () => {
               </Popover.Group>
               <div className="flex items-center justify-end md:flex-1 lg:w-0">
                 <a
-                  href="#"
+                  href="mailto:mykal@tinybox.dev"
                   className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-gray-800 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-blue-600"
                 >
                   Contact Us
