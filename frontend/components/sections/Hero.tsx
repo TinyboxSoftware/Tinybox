@@ -9,7 +9,7 @@ const Hero = () => {
           <div className="flex items-center mb-6">
             <div className="z-20 flex items-center bg-gray-700 rounded-full">
               <span className="block w-4 h-4 my-2 ml-2 mr-3 bg-yellow-300 rounded-xl">
-                <span className="block w-4 h-4 bg-gray-300 rounded-xl {/* bg-yellow-100 animate-ping" */}></span>
+                <span className="block w-4 h-4 bg-gray-300 rounded-xl {/* bg-yellow-100 animate-ping" */}"></span>
               </span>
               <span className="inline my-2 mr-4 text-xs tracking-wider text-gray-200 uppercase md:text-sm">
                 Busy
