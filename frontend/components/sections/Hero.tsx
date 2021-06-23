@@ -9,10 +9,10 @@ const Hero = () => {
           <div className="flex items-center mb-6">
             <div className="z-20 flex items-center bg-gray-700 rounded-full">
               <span className="block w-4 h-4 my-2 ml-2 mr-3 bg-yellow-300 rounded-xl">
-                <span className="block w-4 h-4 bg-yellow-100 rounded-xl animate-ping"></span>
+                <span className="block w-4 h-4 bg-gray-300 rounded-xl {/* bg-yellow-100 animate-ping" */}></span>
               </span>
               <span className="inline my-2 mr-4 text-xs tracking-wider text-gray-200 uppercase md:text-sm">
-                Open Availability
+                Busy
               </span>
             </div>
             <span className="py-2 pr-5 -ml-4 text-xs text-gray-200 uppercase duration-100 bg-gray-800 rounded-r-full md:text-sm group hover:text-white pl-7 z-10inline tranistion hover:bg-indigo-600">
@@ -40,7 +40,7 @@ const Hero = () => {
           </p>
           <p className="mb-4 text-base font-normal text-gray-300">
             I work with businesses in the Fraser Valley to create software
-            solutions. I Specialzie in Shopify Development, and custom web
+            solutions. I specialize in Shopify, and custom web
             development.
           </p>
           <small className="py-6 text-sm font-bold tracking-wider text-gray-600 uppercase">
