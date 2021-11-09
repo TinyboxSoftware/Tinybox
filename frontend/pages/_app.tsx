@@ -11,8 +11,7 @@ const MyApp = ({ Component, data, pageProps }) => {
   useEffect(() => {
     // Initialize Fathom when the app loads
     Fathom.load('LWOPLBLT', {
-      includedDomains: ['tinybox.dev/'],
-      excludedDomains: ['localhost'],
+      includedDomains: ['tinybox.dev', 'www.tinybox.dev'],
     });
     function onRouteChangeComplete() {
       Fathom.trackPageview();
