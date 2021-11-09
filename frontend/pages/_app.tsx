@@ -3,7 +3,7 @@ import '../styles/tailwind.css';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '@components/layout/Layout';
-// import * as Fathom from 'fathom-client';
+import * as Fathom from 'fathom-client';
 
 const MyApp = ({ Component, data, pageProps }) => {
   const router = useRouter();
