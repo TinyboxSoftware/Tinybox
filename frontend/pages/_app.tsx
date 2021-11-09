@@ -11,7 +11,7 @@ const MyApp = ({ Component, data, pageProps }) => {
   useEffect(() => {
     // Initialize Fathom when the app loads
     Fathom.load('LWOPLBLT', {
-      includedDomains: ['https://tinybox.dev/'],
+      includedDomains: ['tinybox.dev/'],
       excludedDomains: ['localhost'],
     });
     function onRouteChangeComplete() {
