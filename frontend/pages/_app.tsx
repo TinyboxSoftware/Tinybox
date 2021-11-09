@@ -9,20 +9,20 @@ const MyApp = ({ Component, data, pageProps }) => {
   const router = useRouter();
 
   useEffect(() => {
-    // // Initialize Fathom when the app loads
-    // Fathom.load('IPKIOSJJ', {
-    //   includedDomains: ['YOUR_DOMAIN_HERE'],
-    //   excludedDomains: ['localhost'],
-    // });
-    // function onRouteChangeComplete() {
-    //   Fathom.trackPageview();
-    // }
-    // // Record a pageview when route changes
-    // router.events.on('routeChangeComplete', onRouteChangeComplete);
-    // // Unassign event listener
-    // return () => {
-    //   router.events.off('routeChangeComplete', onRouteChangeComplete);
-    // };
+    // Initialize Fathom when the app loads
+    Fathom.load('LWOPLBLT', {
+      includedDomains: ['https://tinybox.dev/'],
+      excludedDomains: ['localhost'],
+    });
+    function onRouteChangeComplete() {
+      Fathom.trackPageview();
+    }
+    // Record a pageview when route changes
+    router.events.on('routeChangeComplete', onRouteChangeComplete);
+    // Unassign event listener
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete);
+    };
   }, []);
 
   return (
