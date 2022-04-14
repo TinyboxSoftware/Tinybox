@@ -1,0 +1,12 @@
+---
+import '../styles/main.scss'
+const { title = 'Tinybox: Bespoke Software', description = 'Bespoke software to solve business needs'} = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="description" property="og:description" content={description} />
+<title>{title}</title>
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel="stylesheet" />
