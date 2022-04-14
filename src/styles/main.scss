@@ -1,0 +1,28 @@
+@import "open-props/style";
+
+:root {
+  // define colors
+
+  // define fonts & font-sizes
+  --heading: 'Inter', sans-serif;
+  --heading-color: var(--gray-9);
+  --body: 'Inter', sans-serif; 
+  --body-color: var(--gray-7);
+
+  // define spaces & data
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--heading);
+  color: var(--heading-color);
+}
+
+p, input, textarea, select, a {
+  font-family: var(--body);
+  color: var(--body-color);
+}
+
+.site-container{
+  width: 100vw;
+  min-height: 100vh;
+}
