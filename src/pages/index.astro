@@ -1,9 +1,12 @@
 ---
 import MainHead from "../components/MainHead.astro";
 import Footer from "../components/Footer.astro";
+
+import url from '../animations/index.js?url'
 ---
 
 <MainHead title="Tinybox: Home" />
+<script type="module" src={url}></script>
 <script type="module" src="/app.js"></script>
 
 <div class="site-container">
