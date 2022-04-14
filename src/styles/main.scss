@@ -11,6 +11,7 @@
   --heading-color: var(--gray-9);
   --body: "Inter", sans-serif;
   --body-color: var(--gray-7);
+  --body-size: var(--font-size-1);
 
   // define spaces & data
 }
@@ -32,13 +33,35 @@ input,
 textarea,
 select,
 a,
-small {
+small,
+label,
+button {
   font-family: var(--body);
   color: var(--body-color);
 }
 
+p,
+input,
+textarea,
+select,
+label,
+button {
+  font-size: var(--body-size);
+}
+
+p {
+  margin: var(--size-3) 0;
+}
+
+h1 {
+  font-size: var(--font-size-fluid-2);
+}
+
+h2 {
+  font-size: var(--font-size-fluid-1);
+}
+
 .site-container {
-  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -46,12 +69,41 @@ small {
   justify-content: flex-start;
 }
 
-p {
-  margin: var(--size-3) 0;
-}
-
 .container {
   width: 100%;
   max-width: 68ch;
-  padding: var(--size-3);
+  padding: var(--size-4);
+}
+
+// form stuff
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+
+  input,
+  textarea,
+  select {
+    padding: var(--size-2);
+    border: 2px solid var(--gray-3);
+  }
+}
+
+button {
+  padding: var(--size-2);
+  background: var(--gray-1);
+  border: 2px solid var(--gray-4);
+  &:hover,
+  &:focus {
+    background: var(--gray-9);
+    border: 2px solid var(--gray-9);
+    color: var(--gray-1);
+    cursor: pointer;
+  }
 }

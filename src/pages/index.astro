@@ -1,8 +1,11 @@
 ---
 import MainHead from "../components/MainHead.astro";
+
+import MastHead from "../components/MastHead.astro";
 import Footer from "../components/Footer.astro";
 
-import url from '../animations/index.js?url'
+import url from "../animations/index.js?url";
+import Newsletter from "../components/Newsletter";
 ---
 
 <MainHead title="Tinybox: Home" />
@@ -11,22 +14,35 @@ import url from '../animations/index.js?url'
 
 <div class="site-container">
   <main class="container">
-    <small>Tinybox Software</small>
-    <h1>Bespoke Software Solutions</h1>
-    <p>
-      I'm Mykal, and Tinybox is my side business. I've always enjoyed working on
-      complex problems, and I use Tinybox as an outlet for creative
-      problem-solving.
-    </p>
-    <p>
-      I've worked with friends and businesses on E-commerce websites, native
-      applications, business intelligence, software integrations, and bespoke
-      web apps.
-    </p>
-    <p>
-      If you're interested in working together on a challenging technical
-      problem, please reach out.
-    </p>
+    <MastHead />
+    <section>
+      <p>
+        I'm Mykal, and Tinybox is my side business. I've always enjoyed working
+        on complex problems, and I use Tinybox as an outlet for creative
+        problem-solving.
+      </p>
+      <p>
+        I've worked with friends and businesses on E-commerce websites, native
+        applications, business intelligence, software integrations, and bespoke
+        web apps.
+      </p>
+      <p>
+        If you're interested in working together on a challenging technical
+        problem, please reach out.
+      </p>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <p>Here's a few projects Tinybox has shipped in the past</p>
+    </section>
+    <section>
+      <h2>Newsletter</h2>
+      <p>
+        if you want to keep up with what Tinybox is up to, signup to the
+        newsletter.
+      </p>
+      <Newsletter client:idle />
+    </section>
   </main>
   <Footer />
 </div>
