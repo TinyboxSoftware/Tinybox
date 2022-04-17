@@ -134,9 +134,7 @@ button {
   transition: all 0.2s var(--ease-1);
   &:hover,
   &:focus {
-    background: var(--paper-1);
-    border: 2px solid var(--paper-2);
-    color: var(--gray-1);
+    background: var(--paper-3);
     cursor: pointer;
   }
   &:disabled {
