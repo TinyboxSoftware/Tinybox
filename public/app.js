@@ -1,3 +1,23 @@
+// set themes
+const siteContainerEl = document.querySelector("div.site-container");
+const themePref = localStorage.getItem("theme");
+
+if (themePref && themePref === "night") {
+  siteContainerEl.classList.add("theme__night");
+} else {
+  siteContainerEl.classList.add("theme__day");
+}
+
+if (!themePref) {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    siteContainerEl.classList.add("theme__night");
+  } else {
+    siteContainerEl.classList.add("theme__day");
+  }
+}
 
 // to date stuff in footer
 const datetimeEl = document.querySelector("#datetime");
@@ -21,9 +41,6 @@ const getDateString = () => {
 
 const initDateString = getDateString();
 datetimeEl.innerHTML = initDateString;
-
-
-
 
 setInterval(() => {
   const dateString = getDateString();
