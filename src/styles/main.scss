@@ -1,19 +1,46 @@
 @import "open-props/style";
 
-* {
-  box-sizing: border-box;
-}
 :root {
   // define colors
+  // --paper-1: var(--gray-1);
+  // --paper-2: var(--gray-2);
+  // --paper-3: var(--gray-3);
+
+  // --ink-1: var(--gray-9);
+  // --ink-2: var(--gray-7);
+  // --ink-3: var(--gray-5);
 
   // define fonts & font-sizes
   --heading: "Inter", sans-serif;
-  --heading-color: var(--gray-9);
-  --body: "Inter", sans-serif;
-  --body-color: var(--gray-7);
-  --body-size: var(--font-size-1);
+  --heading-color: var(--ink-1);
 
-  // define spaces & data
+  --body: "Inter", sans-serif;
+  --body-color: var(--ink-2);
+  --body-size: var(--font-size-1);
+}
+
+.theme__day {
+  --paper-1: var(--gray-1);
+  --paper-2: var(--gray-2);
+  --paper-3: var(--gray-3);
+
+  --ink-1: var(--gray-9);
+  --ink-2: var(--gray-7);
+  --ink-3: var(--gray-5);
+}
+
+.theme__night {
+  --paper-1: var(--gray-9);
+  --paper-2: var(--gray-8);
+  --paper-3: var(--gray-6);
+
+  --ink-1: var(--gray-1);
+  --ink-2: var(--gray-3);
+  --ink-3: var(--gray-4);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -25,7 +52,7 @@ h2,
 h3,
 h4 {
   font-family: var(--heading);
-  color: var(--heading-color);
+  color: var(--ink-1);
 }
 
 p,
@@ -35,9 +62,12 @@ select,
 a,
 small,
 label,
-button {
+button,
+ul,
+ol,
+li {
   font-family: var(--body);
-  color: var(--body-color);
+  color: var(--ink-2);
 }
 
 p,
@@ -67,6 +97,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background: var(--paper-1);
 }
 
 .container {
@@ -91,19 +122,27 @@ form {
   textarea,
   select {
     padding: var(--size-2);
-    border: 2px solid var(--gray-3);
+    background: var(--paper-1);
+    border: 2px solid var(--paper-3);
   }
 }
 
 button {
   padding: var(--size-2);
-  background: var(--gray-1);
-  border: 2px solid var(--gray-4);
+  background: var(--paper-2);
+  border: 2px solid var(--paper-3);
+  transition: all 0.2s var(--ease-1);
   &:hover,
   &:focus {
-    background: var(--gray-9);
-    border: 2px solid var(--gray-9);
+    background: var(--paper-1);
+    border: 2px solid var(--paper-2);
     color: var(--gray-1);
     cursor: pointer;
+  }
+  &:disabled {
+    opacity: 0.3;
+    &:hover {
+      background: var(--gray-4);
+    }
   }
 }
