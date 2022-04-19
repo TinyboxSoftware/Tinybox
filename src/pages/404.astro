@@ -1,14 +1,8 @@
 ---
-import MainHead from "../components/MainHead.astro";
-
-import MastHead from "../components/MastHead.astro";
-import Footer from "../components/Footer.astro";
-
-import url from "../animations/index.js?url";
-import Newsletter from "../components/Newsletter";
+import Home from "../layouts/Home.astro";
 ---
 
-<MainHead title="Tinybox: Whoops!" />
-
-<h1>404</h1>
-<p>we're lost baby</p>
+<Home title="Tinybox: 404!">
+  <h1>404</h1>
+  <p>we're lost... <a href="/">please go home</a></p>
+</Home>

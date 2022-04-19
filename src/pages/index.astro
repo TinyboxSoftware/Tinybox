@@ -1,23 +1,16 @@
 ---
-import MainHead from "../components/MainHead.astro";
+import Home from '../layouts/Home.astro'
 
 import MastHead from "../components/MastHead.astro";
 import About from "../components/About.astro";
-import Footer from "../components/Footer.astro";
-
-import url from "../animations/index.js?url";
 import Newsletter from "../components/Newsletter";
 ---
 
-<MainHead title="Tinybox: Home" />
-<script type="module" src={url}></script>
-<script type="module" src="/app.js"></script>
-
-<div class="site-container theme__day">
-  <main class="container">
+<Home title={'Home'}>
     <MastHead />
     <About />
     <Newsletter client:idle />
-  </main>
-  <Footer />
-</div>
+</Home>
+
+
+

@@ -1,7 +1,11 @@
 ---
+const {
+  subheading = "Tinybox Software",
+  title = "Bespoke Software Solutions",
+} = Astro.props;
 ---
 
 <header>
-  <small>Tinybox Software</small>
-  <h1>Bespoke Software Solutions</h1>
+  <small>{subheading}</small>
+  <h1>{title}</h1>
 </header>

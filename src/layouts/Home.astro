@@ -1,0 +1,17 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Footer from "../components/Footer.astro";
+import url from "../animations/index.js?url";
+
+const { title = "Tinybox: Home" } = Astro.props;
+---
+
+<MainHead {title} />
+<script type="module" src={url}></script>
+<script type="module" src="/app.js"></script>
+<div class="site-container theme__day">
+  <main class="container">
+    <slot />
+  </main>
+  <Footer />
+</div>
