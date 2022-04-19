@@ -21,8 +21,8 @@
 
 .theme__day {
   --paper-1: var(--gray-1);
-  --paper-2: var(--gray-2);
-  --paper-3: var(--gray-3);
+  --paper-2: var(--gray-3);
+  --paper-3: var(--gray-4);
 
   --ink-1: var(--gray-9);
   --ink-2: var(--gray-7);
@@ -98,6 +98,7 @@ h2 {
   align-items: center;
   justify-content: flex-start;
   background: var(--paper-1);
+  transition: background 0.2s var(--ease-1);
 }
 
 .container {
@@ -123,6 +124,7 @@ form {
   select {
     padding: var(--size-2);
     background: var(--paper-1);
+    transition: background 0.2s var(--ease-1);
     border: 2px solid var(--paper-3);
   }
 }

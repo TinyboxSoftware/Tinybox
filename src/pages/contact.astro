@@ -1,25 +1,12 @@
 ---
-import MainHead from "../components/MainHead.astro";
+import Home from '../layouts/Home.astro'
 
 import MastHead from "../components/MastHead.astro";
-import About from "../components/About.astro";
-import Footer from "../components/Footer.astro";
-
-import url from "../animations/index.js?url";
-import Newsletter from "../components/Newsletter";
+import ContactForm from '../components/forms/ContactForm';
 ---
 
-<MainHead title="Tinybox: Home" />
-<script type="module" src={url}></script>
-<script type="module" src="/app.js"></script>
-
-<div class="site-container theme__day">
-  <main class="container">
-    <MastHead />
-    <section>
-      <h2>Contact</h2>
-      <p>This is where you can contact me</p>
-    </section>
-  </main>
-  <Footer />
-</div>
+<Home title={'Home'}>
+    <MastHead title="Contact" />
+    <p>You can reach out to us through the form below</p>
+    <ContactForm client:idle />
+</Home>
