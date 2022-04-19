@@ -1,12 +1,15 @@
 ---
-import Home from '../layouts/Home.astro'
+import Home from "../layouts/Home.astro";
 
 import MastHead from "../components/MastHead.astro";
-import ContactForm from '../components/forms/ContactForm';
+import ContactForm from "../components/forms/ContactForm.astro";
 ---
 
-<Home title={'Home'}>
-    <MastHead title="Contact Us" />
-    <p>You can reach out to us through the form below</p>
-    <ContactForm client:idle />
+<Home title={"Tinybox: Contact Us"}>
+  <MastHead title="Contact Us" />
+  <p>
+    The best way to reach out about a new project is right here. Use the form
+    below to get in contact with me
+  </p>
+  <ContactForm />
 </Home>
