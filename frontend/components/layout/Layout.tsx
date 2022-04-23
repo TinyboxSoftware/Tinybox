@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
           type="image/svg"
           href="https://res.cloudinary.com/tinbyox/image/upload/v1620228763/Tinybox_Logo_No_border_boqctm.svg"
         ></link>
+        <script async defer data-website-id="12833e09-f6e4-4a9d-a2d9-f777a455f73e" src="https://analytics.tbx.sh/umami.js"></script>
       </Head>
       <Navigation />
       <main className="min-h-screen">{children}</main>
