@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = await Astro.glob('./work/**/*.md');
+const featuredProjects = projects.slice(0, 3);
+---
+
+<Layout title="Home | Tinybox">
+  <main>
+    <section>
+      <p>Hey 👋🏻, My name is Mykal Machon.</p>
+      <p>
+        I'm a software developer and Tinybox is my consulting business. I offer
+        web development, design, and custom software solutions.
+      </p>
+      <p>
+        If you're interested in working with you me, you can reach me on the <a
+          href="/contact">/contact page</a
+        >. If you're not sure, check out the <a href="/work">/work page</a>
+      </p>
+    </section>
+    <section>
+      <h2>My work</h2>
+      <div class="works__list">
+        {featuredProjects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss">
+  .works__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--size-3);
+    @media screen and (max-width: 1100px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

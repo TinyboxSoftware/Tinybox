@@ -1,0 +1,59 @@
+---
+---
+
+<nav class="container--wide__centered">
+  <div class="nav-container">
+    <div class="nav__logo">
+      <img
+        src="https://res.cloudinary.com/tinbyox/image/upload/v1620228763/Tinybox_Logo_No_border_boqctm.svg"
+        alt="Tinybox Software logo"
+        width="48"
+        height="48"
+      />
+    </div>
+    <div class="nav__content">
+      <ul>
+        <li>
+          <a href="/">/home</a>
+        </li>
+        <li>
+          <a href="/work">/work</a>
+        </li>
+        <li>
+          <a href="/contact">/contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style lang="scss">
+  .nav-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--size-3) var(--size-2);
+    border-bottom: 1px solid var(--gray-3);
+  }
+
+  .nav__logo {
+    padding: var(--size-2);
+    // background: var(--indigo-1);
+    // border: 1px solid var(--indigo-4);
+    border-radius: var(--radius-round);
+    height: auto;
+    display: grid;
+    place-items: center;
+  }
+
+  .nav__content {
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      gap: var(--size-3);
+    }
+  }
+</style>

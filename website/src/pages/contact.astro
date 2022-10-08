@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home | Tinybox">
+  <main>
+    <section>
+      <h1>Contact</h1>
+      <p>let's work together</p>
+    </section>
+    <section>
+      <form action="contact">
+        <div class="form-control">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your Name"
+          />
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input
+            name="email"
+            id="email"
+            type="email"
+            required
+            placeholder="your.name@gmail.com"
+          />
+        </div>
+        <div class="form-control">
+          <label for="whats-up">What do you want to work on?</label>
+          <textarea name="whats-up" id="whats-up" cols="30" rows="10"></textarea>
+        </div>
+      </form>
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss">
+  .form-control{
+    display: flex;
+    flex-direction: column;
+    margin: var(--size-3) 0;
+  }
+
+  input, textarea {
+    margin-top: var(--size-3);
+    padding: var(--size-2);
+    border: 1px solid var(--indigo-7);
+    border-radius: var(--radius-2);
+  }
+</style>

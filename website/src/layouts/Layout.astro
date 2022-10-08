@@ -1,0 +1,28 @@
+---
+export interface Props {
+  title: string;
+}
+
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import MainHead from '../components/MainHead.astro';
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <MainHead />
+  </head>
+  <body>
+    <div class="site-container">
+      <Nav />
+      <div class="container">
+        <slot />
+      </div>
+      <Footer />
+    </div>
+    <style is:global></style>
+  </body>
+</html>
