@@ -2,45 +2,55 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="container">
-  <section class="footer__content">
-    <ul>
-      <li>Twitter</li>
-      <li>GitHub</li>
-      <li>Blog</li>
-    </ul>
-    <ul>
-      <li>Home</li>
-      <li>Work</li>
-      <li>Contact</li>
-    </ul>
-  </section>
-  <section class="footer__bottom">
-    <p>&copy; {currentYear} Mykal Machon</p>
-    <small class="byline">built with 💖 and 👨‍💻</small>
-  </section>
+<footer class="container--wide__centered">
+  <div class="footer">
+    <section class="footer__content">
+      <ul>
+        <li>Twitter</li>
+        <li>GitHub</li>
+        <li>Blog</li>
+        <li>Merch</li>
+      </ul>
+      <ul>
+        <li>Home</li>
+        <li>Work</li>
+        <li>Contact</li>
+      </ul>
+    </section>
+    <section class="footer__bottom">
+      <p>&copy; {currentYear} Mykal Machon</p>
+      <small class="byline">built with 💖 and 👨‍💻</small>
+    </section>
+  </div>
 </footer>
 
 <style lang="scss">
   footer {
-    border-top: 1px solid var(--gray-4);
-    width: 100%;
-    max-width: 100ch;
-  }
-  .footer__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--size-3);
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    ul li {
-      margin: var(--size-2) 0;
+    background: #505DFF;
+    * {
+      color: var(--gray-1);
     }
   }
-  .footer__bottom {
+
+  .footer {
+    padding: var(--size-5) var(--size-3);
     width: 100%;
+
+    .footer__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--size-3);
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      ul li {
+        margin: var(--size-2) 0;
+      }
+    }
+    .footer__bottom {
+      width: 100%;
+    }
   }
 </style>

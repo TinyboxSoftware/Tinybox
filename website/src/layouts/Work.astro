@@ -19,16 +19,27 @@ const { content } = Astro.props;
     <div class="site-container">
       <Nav />
       <header class="container">
+        <img src={content.header_image} alt={`screenshot of the ${content.title} project`} />
         <h1>{content.title}</h1>
         <small>built for {content.client}</small>
         <p>{content.excerpt}</p>
       </header>
-      <div class="container">
-
+      <div class="container work">
         <slot />
       </div>
       <Footer />
     </div>
-    <style is:global></style>
   </body>
 </html>
+
+<style lang="scss">
+  header {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .work {
+    line-height: 2em;
+  }
+</style>

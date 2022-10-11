@@ -1,4 +1,6 @@
 /* resets */
+
+
 * {
   box-sizing: border-box;
 }
@@ -12,6 +14,10 @@ html {
     scroll-behavior: unset;
     transition: none;
   }
+}
+
+body {
+  margin: 0;
 }
 
 :root {
@@ -48,13 +54,13 @@ html {
   --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 
   /* COLORS TO BE USED IN UI */
-  --paper-1: var(--color-light-1);
+  --paper-1: #111827;
   --paper-2: var(--color-light-2);
   --paper-3: var(--color-light-3);
 
-  --ink-1: var(--color-dark-1);
-  --ink-2: var(--color-dark-2);
-  --ink-3: var(--color-dark-3);
+  --ink-1: var(--gray-1);
+  --ink-2: var(--gray-2);
+  --ink-3: var(--gray-3);
 
   --acc-1: var(--color-acc-1);
   --acc-2: var(--color-acc-2);
@@ -105,12 +111,12 @@ h3 {
 
 .container {
   grid-column-start: 2;
-  padding: var(--size-3) var(--size-2);
+  padding: var(--size-3);
 }
 
 .container--wide {
   grid-column: span 3;
-  paddin: var(--size-3) var(--size-2);
+  padding: var(--size-3);
 }
 
 .container--wide__centered {
@@ -127,11 +133,20 @@ h3 {
 }
 
 a {
-  color: var(--indigo-7);
-  text-decoration: underline;
+  color: #505DFF;
+  text-decoration: none;
+  padding: var(--size-1);
 }
 
 a:hover {
-  background: var(--indigo-1);
+  background: #1e2a43;
   border-radius: var(--radius-2);
+}
+
+blockquote {
+  background: #1e2a43;
+  margin: 0;
+  padding: var(--size-1) var(--size-1) var(--size-1) 40px;
+  border-left: 5px solid var(--acc-1);
+  font-style: italic;
 }

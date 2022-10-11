@@ -22,10 +22,15 @@ const featuredProjects = projects.slice(0, 3);
       </p>
     </section>
     <section>
-      <h2>My work</h2>
+      <h2>Recent work</h2>
+      <p>Here's a list of projects that I've worked on</p>
       <div class="works__list">
         {featuredProjects.map((project) => <ProjectCard project={project} />)}
       </div>
+    </section>
+    <section>
+      <h2>Testimonials</h2>
+      <p>Here's some recommendations from previous works.</p>
     </section>
   </main>
 </Layout>

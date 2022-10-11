@@ -14,13 +14,13 @@
     <div class="nav__content">
       <ul>
         <li>
-          <a href="/">/home</a>
+          <a href="/">home</a>
         </li>
         <li>
-          <a href="/work">/work</a>
+          <a href="/work">work</a>
         </li>
         <li>
-          <a href="/contact">/contact</a>
+          <a href="/contact">contact</a>
         </li>
       </ul>
     </div>
@@ -35,7 +35,7 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--size-3) var(--size-2);
-    border-bottom: 1px solid var(--gray-3);
+    border-bottom: 1px solid var(--gray-8);
   }
 
   .nav__logo {
@@ -54,6 +54,14 @@
       flex-direction: row;
       list-style: none;
       gap: var(--size-3);
+    }
+    li {
+      padding: var(--size-2);
+      border-radius: var(--radius-2);
+      &:hover,
+      &:focus-within {
+        background: #1e2a43;
+      }
     }
   }
 </style>
