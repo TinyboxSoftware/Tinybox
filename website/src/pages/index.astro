@@ -10,32 +10,148 @@ const featuredProjects = projects.slice(0, 3);
 <Layout title="Home | Tinybox">
   <main>
     <section>
-      <p>Hey 👋🏻, My name is Mykal Machon.</p>
+      <p>Hey, My name is Mykal Machon.</p>
       <p>
-        I'm a software developer and Tinybox is my consulting business. I offer
-        web development, design, and custom software solutions.
-      </p>
-      <p>
-        If you're interested in working with you me, you can reach me on the <a
+        I'm a software developer and Tinybox is my consulting business. If
+        you're interested in working with you me, you can reach me on the <a
           href="/contact">/contact page</a
         >. If you're not sure, check out the <a href="/work">/work page</a>
       </p>
     </section>
+    <!-- <section>
+      <h2>Services</h2>
+      <p>
+        Regardless of labels, I'm here to help you solve a problem with software, in a sustainable way. 
+        That said, the work that I do tend to fall into one of the following buckets.
+      </p>
+      <ul>
+        <li>Development</li>
+        <li>Design</li>
+        <li>Consulting</li>
+        <li>All of the above</li>
+      </ul>
+    </section> -->
     <section>
       <h2>Recent work</h2>
       <p>Here's a list of projects that I've worked on</p>
       <div class="works__list">
         {featuredProjects.map((project) => <ProjectCard project={project} />)}
       </div>
+      <p class="centered">
+        <a href="/work">see more work</a>
+      </p>
     </section>
     <section>
-      <h2>Testimonials</h2>
-      <p>Here's some recommendations from previous works.</p>
+      <div class="centered" style="margin-top: var(--size-10);">
+        <h2>Testimonials</h2>
+        <p>Here's what people have to say about working with me.</p>
+      </div>
+      <div
+        class="carousel"
+        data-flickity='{"wrapAround": true, 
+                        "autoPlay": 5000, 
+                        "prevNextButtons": false,
+                        "pageDots": false}'
+      >
+        <div class="carousel-cell testimonial">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem odio
+            mollitia consectetur dicta impedit, animi voluptatibus nesciunt quia
+            aut repellendus quam itaque distinctio sint, vero libero labore
+            culpa officia eligendi?
+          </p>
+          <div class="attribution">
+            <i>Some guy, from somewhere</i>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem odio
+            mollitia consectetur dicta impedit, animi voluptatibus nesciunt quia
+            aut repellendus quam itaque distinctio sint, vero libero labore
+            culpa officia eligendi?
+          </p>
+          <div class="attribution">
+            <i>Some guy, from somewhere</i>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem odio
+            mollitia consectetur dicta impedit, animi voluptatibus nesciunt quia
+            aut repellendus quam itaque distinctio sint, vero libero labore
+            culpa officia eligendi?
+          </p>
+          <div class="attribution">
+            <i>Some guy, from somewhere</i>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem odio
+            mollitia consectetur dicta impedit, animi voluptatibus nesciunt quia
+            aut repellendus quam itaque distinctio sint, vero libero labore
+            culpa officia eligendi?
+          </p>
+          <div class="attribution">
+            <i>Some guy, from somewhere</i>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </Layout>
 
 <style lang="scss">
+  .centered {
+    text-align: center;
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    margin: var(--size-3) 0;
+    @media screen and (min-width: 1100px){
+      &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: linear-gradient(
+          to right,
+          rgba(17, 24, 39, 1) 0%,
+          rgba(17, 24, 39, 0) 15%,
+          rgba(17, 24, 39, 0) 85%,
+          rgba(17, 24, 39, 1) 100%
+        );
+      }
+    }
+  }
+
+  .carousel-cell {
+    border: 1px solid var(--gray-8);
+    padding: var(--size-3);
+    border-radius: var(--radius-2);
+    margin-right: var(--size-3);
+    margin: var(--size-3) var(--size-3) var(--size-3) 0;
+    width: 60%;
+    @media screen and (max-width: 1100px){ width: calc(100% - var(--size-3)); }
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
+    opacity: 0.5;
+    transition: box-shadow 0.3s var(--ease-elastic-5),
+      opacity 0.3s var(--ease-elastic-3);
+    &.is-selected {
+      opacity: 1;
+    }
+    &:hover {
+      border: 1px solid #505dff;
+      box-shadow: 0 0 0 3px #505dff;
+    }
+  }
+
   .works__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

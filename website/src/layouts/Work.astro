@@ -19,27 +19,59 @@ const { content } = Astro.props;
     <div class="site-container">
       <Nav />
       <header class="container">
-        <img src={content.header_image} alt={`screenshot of the ${content.title} project`} />
+        <img
+          src={content.header_image}
+          alt={`screenshot of the ${content.title} project`}
+        />
         <h1>{content.title}</h1>
-        <small>built for {content.client}</small>
-        <p>{content.excerpt}</p>
+        <div class="header__desc">
+          <section>
+            <h4>Project info</h4>
+            <p>Built for: {content.client}</p>
+            <p>Work brief: {content.excerpt}</p>
+            {
+              content.link && (
+                <p>
+                  Link: <a href={content.link}>see the project</a>
+                </p>
+              )
+            }
+          </section>
+          <section>
+            <h4>Services provided</h4>
+            <ul class="tag-list">
+              {
+                content.tags.map((t: string) => (
+                  <li class="tag" data-tag={t}>
+                    {t}
+                  </li>
+                ))
+              }
+            </ul>
+          </section>
+        </div>
       </header>
       <div class="container work">
         <slot />
       </div>
       <Footer />
     </div>
+    <style lang="scss">
+      header {
+        border-bottom: 1px solid var(--gray-8);
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .header__desc {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--size-3);
+      }
+      .work {
+        line-height: 2em;
+      }
+    </style>
   </body>
 </html>
-
-<style lang="scss">
-  header {
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-  .work {
-    line-height: 2em;
-  }
-</style>
