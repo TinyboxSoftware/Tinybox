@@ -49,7 +49,15 @@ import Layout from '../layouts/Layout.astro';
   input, textarea {
     margin-top: var(--size-3);
     padding: var(--size-2);
-    border: 1px solid var(--indigo-7);
+    border: 1px solid var(--gray-7);
+    color: var(--gray-1);
     border-radius: var(--radius-2);
+    background: #1e2a43;
+    &:focus {
+      outline-style: dashed;
+      outline-width: 2px;
+      outline-offset: 6px;
+      outline-color: var(--acc-1);
+    }
   }
 </style>

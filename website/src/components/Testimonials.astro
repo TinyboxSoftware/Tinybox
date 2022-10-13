@@ -1,0 +1,40 @@
+<section>
+  <div class="centered" style="margin-top: var(--size-10);">
+    <h2>Testimonials</h2>
+    <p>Here's what people have to say about working with me.</p>
+  </div>
+  <div class="carousel"
+    data-flickity='{"wrapAround": true, 
+                    "autoPlay": 5000, 
+                    "prevNextButtons": false,
+                    "pageDots": false}'
+  >
+    <slot></slot>
+  </div>
+</section>
+
+<style lang="scss">
+  .carousel {
+    position: relative;
+    width: 100%;
+    margin: var(--size-3) 0;
+    @media screen and (min-width: 1100px){
+      &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: linear-gradient(
+          to right,
+          rgba(17, 24, 39, 1) 0%,
+          rgba(17, 24, 39, 0) 15%,
+          rgba(17, 24, 39, 0) 85%,
+          rgba(17, 24, 39, 1) 100%
+        );
+      }
+    }
+  }
+</style>

@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Testimonials from '../components/Testimonials.astro';
 
 const projects = await Astro.glob('./work/**/*.md');
 const featuredProjects = projects.slice(0, 3);
@@ -32,7 +34,7 @@ const featuredProjects = projects.slice(0, 3);
       </ul>
     </section> -->
     <section>
-      <h2>Recent work</h2>
+      <h2>Recent Work</h2>
       <p>Here's a list of projects that I've worked on</p>
       <div class="works__list">
         {featuredProjects.map((project) => <ProjectCard project={project} />)}
@@ -41,117 +43,36 @@ const featuredProjects = projects.slice(0, 3);
         <a href="/work">see more work</a>
       </p>
     </section>
-    <section>
-      <div class="centered" style="margin-top: var(--size-10);">
-        <h2>Testimonials</h2>
-        <p>Here's what people have to say about working with me.</p>
-      </div>
-      <div
-        class="carousel"
-        data-flickity='{"wrapAround": true, 
-                        "autoPlay": 5000, 
-                        "prevNextButtons": false,
-                        "pageDots": false}'
-      >
-        <div class="carousel-cell testimonial">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem odio
-            mollitia consectetur dicta impedit, animi voluptatibus nesciunt quia
-            aut repellendus quam itaque distinctio sint, vero libero labore
-            culpa officia eligendi?
-          </p>
-          <div class="attribution">
-            <i>Some guy, from somewhere</i>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem odio
-            mollitia consectetur dicta impedit, animi voluptatibus nesciunt quia
-            aut repellendus quam itaque distinctio sint, vero libero labore
-            culpa officia eligendi?
-          </p>
-          <div class="attribution">
-            <i>Some guy, from somewhere</i>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem odio
-            mollitia consectetur dicta impedit, animi voluptatibus nesciunt quia
-            aut repellendus quam itaque distinctio sint, vero libero labore
-            culpa officia eligendi?
-          </p>
-          <div class="attribution">
-            <i>Some guy, from somewhere</i>
-          </div>
-        </div>
-        <div class="carousel-cell">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem odio
-            mollitia consectetur dicta impedit, animi voluptatibus nesciunt quia
-            aut repellendus quam itaque distinctio sint, vero libero labore
-            culpa officia eligendi?
-          </p>
-          <div class="attribution">
-            <i>Some guy, from somewhere</i>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Testimonials>
+      <Testimonial
+        quote={`It was an absolute pleasure working with Mykal on my company website. He was extremely professional and very quick to respond. He was great at listening to my ideas but contributed both a creative and technical element to the design process that took my website to the next level. I will definitely work with him again on projects moving forward`}
+        author={{
+          name: 'Angela Dhillon',
+          role: 'Founder of AND Architectural',
+          image_url: '/assets/testimonials/and-architectural-angela.png',
+        }}
+      />
+      <Testimonial
+        quote={`Fantastic service and a great guy. We recommend Tinybox to anyone who needs a Shopify website or web services. We'll be working together for any further web-based services we require! Mykal will deliver exactly what you want, thanks for all your hard work!`}
+        author={{
+          name: 'Saurabh Patel',
+          role: 'E-Commerce Manager at VSSL Gear',
+          image_url: '/assets/testimonials/vssl-saurabh.jpg',
+        }}
+      />
+      <Testimonial
+        quote={`We are so happy with Mykal's work! He made us a beautiful new website and online store, checking in frequently to make sure we liked the direction he was taking everything. He has been super accommodating of our last-minute requests and changes. We're so glad we switched to Tinybox!`}
+        author={{
+          name: 'Katherine Taylor',
+          role: "Founder of SaraBella's Gluten Free Café",
+          image_url: '/assets/testimonials/sbgf-katherine.jpg',
+        }}
+      />
+    </Testimonials>
   </main>
 </Layout>
 
 <style lang="scss">
-  .centered {
-    text-align: center;
-  }
-
-  .carousel {
-    position: relative;
-    width: 100%;
-    margin: var(--size-3) 0;
-    @media screen and (min-width: 1100px){
-      &:after{
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        background: linear-gradient(
-          to right,
-          rgba(17, 24, 39, 1) 0%,
-          rgba(17, 24, 39, 0) 15%,
-          rgba(17, 24, 39, 0) 85%,
-          rgba(17, 24, 39, 1) 100%
-        );
-      }
-    }
-  }
-
-  .carousel-cell {
-    border: 1px solid var(--gray-8);
-    padding: var(--size-3);
-    border-radius: var(--radius-2);
-    margin-right: var(--size-3);
-    margin: var(--size-3) var(--size-3) var(--size-3) 0;
-    width: 60%;
-    @media screen and (max-width: 1100px){ width: calc(100% - var(--size-3)); }
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
-    opacity: 0.5;
-    transition: box-shadow 0.3s var(--ease-elastic-5),
-      opacity 0.3s var(--ease-elastic-3);
-    &.is-selected {
-      opacity: 1;
-    }
-    &:hover {
-      border: 1px solid #505dff;
-      box-shadow: 0 0 0 3px #505dff;
-    }
-  }
-
   .works__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

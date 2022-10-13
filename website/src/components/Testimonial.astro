@@ -1,0 +1,80 @@
+---
+interface Props {
+  author: {
+    image_url: string;
+    name: string;
+    role?: string;
+  };
+  quote: string;
+}
+
+const { author, quote } = Astro.props;
+---
+
+<blockquote class="carousel-cell testimonial">
+  <slot />
+  <p>{quote}</p>
+  <cite>
+    <img
+      width="48px"
+      height="48px"
+      src={author.image_url}
+      alt={`profile picture of ${author.image_url}`}
+    />
+    <i
+      >{author.name}{
+        author.role && (
+          <>
+            <br /> <span>{author.role}</span>{' '}
+          </>
+        )
+      }</i
+    >
+  </cite>
+</blockquote>
+
+<style lang="scss">
+  .carousel-cell {
+    border: 1px solid var(--gray-8);
+    padding: var(--size-3);
+    border-radius: var(--radius-2);
+    margin-right: var(--size-3);
+    background: var(--paper-1);
+    margin: var(--size-3) var(--size-3) var(--size-3) 0;
+    width: 60%;
+    @media screen and (max-width: 1100px) {
+      width: calc(100% - var(--size-3));
+    }
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
+    opacity: 0.5;
+    transition: box-shadow 0.3s var(--ease-elastic-5),
+      opacity 0.3s var(--ease-elastic-3);
+    cite {
+      img {
+        width: 64px;
+        height: 64px;
+        border-radius: var(--radius-round);
+        border: 1px solid var(--gray-8);
+        @media screen and (max-width: 800px) {
+          width: 48px;
+          height: 48px;
+        }
+      }
+      span {
+        font-size: var(--font-size-sm);
+        color: var(--gray-5);
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--size-3);
+    }
+    &.is-selected {
+      opacity: 1;
+    }
+    &:hover {
+      border: 1px solid #505dff;
+      box-shadow: 0 0 0 3px #505dff;
+    }
+  }
+</style>

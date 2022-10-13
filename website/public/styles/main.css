@@ -147,6 +147,10 @@ a:focus{
   outline: 3px solid #1e2a43;
 }
 
+.centered {
+  text-align: center;
+}
+
 blockquote {
   background: #1e2a43;
   margin: 0;

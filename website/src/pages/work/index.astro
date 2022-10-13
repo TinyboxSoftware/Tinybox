@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 
 const projects = await Astro.glob('./**/*.md');
-const featuredProjects = projects.slice(0, 3);
 ---
 
 <Layout title="Home | Tinybox">
@@ -16,7 +15,7 @@ const featuredProjects = projects.slice(0, 3);
     <section>
       <h2>My work</h2>
       <div class="works__list">
-        {featuredProjects.map((project) => <ProjectCard project={project} />)}
+        {projects.map((project) => <ProjectCard project={project} />)}
       </div>
     </section>
   </main>

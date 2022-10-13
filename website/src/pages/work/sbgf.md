@@ -11,9 +11,15 @@ tags:
 
 The SaraBella's Gluten Free cafe website (sarabellasgf.com) was an interesting project. This project was started right around when COVID-19 was starting and was heavily inspired by the need for an e-commerce solution to keep their business thriving.
 
-The solution we came up with was a custom, mobile-optimized e-commerce store that made it easy for customers to order items for pickup.
+The solution we came up with was a custom, mobile-optimized, e-commerce store that made it easy for customers to order items for covid-safe pickup.
 
-## Features
+## Key Deliverables
+
+- Comprehensive website design and implementation
+- Fully editable content via the Shopify admin interface.
+- Custom drink ordering system for in-store pickup.
+- Custom kitchen management system for managing incoming drink orders.
+- Website analytics via Google analytics and Shopify reports.
 
 ## Testimonial
 

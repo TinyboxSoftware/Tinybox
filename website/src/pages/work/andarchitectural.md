@@ -5,18 +5,22 @@ client: 'AND Architectural'
 excerpt: 'landing page for an architectural firm.'
 header_image: '/assets/andarchitectural.png'
 tags:
-  - 'design'
-  - 'development'
+  - 'Next.js'
+  - 'design & dev'
 ---
+
+## Summary
 
 Angela from AND Architectural approached us about putting together a website to help build band credibility for her business to clients and prospective partners.
 
 We worked together on building a high quality site with a small scope. The result was a high quality landing page for her business that's fully configurable by her and her time via a content management system.
 
-## Features
+## Key Deliverables
 
 - Fully editable site via the Sanity.io content management system (CMS)
-- This is another feature
+- Contact form that goes directly to the owner's email.
+- Website analytics and monitoring services via Fathom analytics.
+- Brand development and ideation.
 
 ## Testimonial
 

@@ -4,23 +4,25 @@
 <nav class="container--wide__centered">
   <div class="nav-container">
     <div class="nav__logo">
-      <img
-        src="https://res.cloudinary.com/tinbyox/image/upload/v1620228763/Tinybox_Logo_No_border_boqctm.svg"
-        alt="Tinybox Software logo"
-        width="48"
-        height="48"
-      />
+      <a href="/">
+        <img
+          src="https://res.cloudinary.com/tinbyox/image/upload/v1620228763/Tinybox_Logo_No_border_boqctm.svg"
+          alt="Tinybox Software logo"
+          width="48"
+          height="48"
+        />
+      </a>
     </div>
     <div class="nav__content">
       <ul>
         <li>
-          <a href="/">home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="/work">work</a>
+          <a href="/work">Work</a>
         </li>
         <li>
-          <a href="/contact">contact</a>
+          <a href="/contact">Contact</a>
         </li>
       </ul>
     </div>
@@ -46,6 +48,15 @@
     height: auto;
     display: grid;
     place-items: center;
+    a {
+      padding: 0;
+      &:hover{
+        background: rgba(0,0,0,0);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
   }
 
   .nav__content {

@@ -5,8 +5,8 @@ client: 'Redekop Ferrario Properties'
 excerpt: 'a realty site for a building developer.'
 header_image: '/assets/rfproperties.png'
 tags:
-  - 'design'
-  - 'development'
+  - 'Next.js'
+  - 'design & dev'
 ---
 
 Redekop Ferrario properties approached us to build a website that showcased previous developments, as well as upcoming developments to prospective buyers. The real stand out piece for this project was an interactive map on the page that highlighted the neighborhood.
