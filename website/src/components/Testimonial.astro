@@ -8,6 +8,8 @@ interface Props {
   quote: string;
 }
 
+import { Image } from '@astrojs/image/components';
+
 const { author, quote } = Astro.props;
 ---
 
@@ -15,9 +17,11 @@ const { author, quote } = Astro.props;
   <slot />
   <p>{quote}</p>
   <cite>
-    <img
-      width="48px"
-      height="48px"
+    <Image
+      width={64}
+      height={64}
+      fit="cover"
+      format="webp"
       src={author.image_url}
       alt={`profile picture of ${author.image_url}`}
     />
