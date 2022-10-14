@@ -1,9 +1,16 @@
 ---
 const { frontmatter, url } = Astro.props.project;
+import { Image } from '@astrojs/image/components';
 ---
 
 <article>
-  <img src={frontmatter.header_image} alt="" />
+  <Image
+    src={frontmatter.header_image}
+    alt={`photos from the ${frontmatter.title} project.`}
+    width={500}
+    aspectRatio={2.15/1}
+    fit="cover"
+  />
   <div class="card">
     <div class="card__title">
       <h3>{frontmatter.title}</h3>
@@ -37,7 +44,7 @@ const { frontmatter, url } = Astro.props.project;
     justify-content: space-between;
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
     transition: transform 0.3s var(--ease-elastic-5),
-    box-shadow 0.3s var(--ease-elastic-5);
+      box-shadow 0.3s var(--ease-elastic-5);
 
     a {
       padding: var(--size-2);
