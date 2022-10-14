@@ -4,6 +4,7 @@ title: 'rfproperties.ca'
 client: 'Redekop Ferrario Properties'
 excerpt: 'a realty site for a building developer.'
 header_image: '/assets/rfproperties.png'
+draft: false
 tags:
   - 'Next.js'
   - 'design & dev'

@@ -4,9 +4,10 @@ title: 'sarabellasgf.com'
 client: "SaraBella's Gluten Free Café"
 excerpt: 'e-commerce store for a local gluten-free café.'
 header_image: '/assets/sbgf.png'
+draft: false
 tags:
-  - 'design'
-  - 'development'
+  - 'Shopify'
+  - 'design & dev'
 ---
 
 The SaraBella's Gluten Free cafe website (sarabellasgf.com) was an interesting project. This project was started right around when COVID-19 was starting and was heavily inspired by the need for an e-commerce solution to keep their business thriving.

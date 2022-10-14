@@ -4,6 +4,7 @@ title: 'andarchitectural.com'
 client: 'AND Architectural'
 excerpt: 'landing page for an architectural firm.'
 header_image: '/assets/andarchitectural.png'
+draft: false
 tags:
   - 'Next.js'
   - 'design & dev'

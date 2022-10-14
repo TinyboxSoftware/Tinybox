@@ -4,6 +4,7 @@ title: 'localfoodsupplyco.com'
 client: 'Local Food Supply Co'
 excerpt: 'Boutique online grocery store and blog.'
 header_image: '/assets/andarchitectural.png'
+draft: true
 tags:
   - 'Shopify'
   - 'design & dev'

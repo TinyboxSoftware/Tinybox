@@ -6,7 +6,8 @@ import Testimonial from '../components/Testimonial.astro';
 import Testimonials from '../components/Testimonials.astro';
 
 const projects = await Astro.glob('./work/**/*.md');
-const featuredProjects = projects.slice(0, 3);
+const nonDraftProjects = projects.filter((project) => !project.frontmatter.draft)
+const featuredProjects = nonDraftProjects.slice(0, 3);
 ---
 
 <Layout title="Home | Tinybox">
