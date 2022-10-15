@@ -5,48 +5,122 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Home | Tinybox">
   <main>
     <section>
-      <h1>Contact</h1>
-      <p>let's work together</p>
+      <h1>Get in touch</h1>
+      <p>If you want to work on something together, reach out!</p>
+      <p>I'm always looking for new exciting opportunities, <br /> so even if your idea isn't strictly related to my previous work don't hesitate!</p>
     </section>
-    <section>
-      <form action="contact">
-        <div class="form-control">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Your Name"
-          />
-        </div>
-        <div class="form-control">
-          <label for="email">Email</label>
-          <input
-            name="email"
-            id="email"
-            type="email"
-            required
-            placeholder="your.name@gmail.com"
-          />
-        </div>
-        <div class="form-control">
-          <label for="whats-up">What do you want to work on?</label>
-          <textarea name="whats-up" id="whats-up" cols="30" rows="10"></textarea>
-        </div>
-      </form>
+    <section class="contact">
+      <article class="contact__info">
+        <h2>Contact information</h2>
+        <p>
+          The best way to get a hold of us is to send an email through the form
+          on the right, but you can also find us on twitter, and our blog.
+        </p>
+        <ul>
+          <li>email: hello@tinybox.dev</li>
+          <li>twitter: @TinyboxSoftware</li>
+        </ul>
+      </article>
+      <article class="contact__form">
+        <h2>Message us</h2>
+        <form name="contact" method="POST" data-netlify="true">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              required
+              placeholder="your.name@gmail.com"
+            />
+          </div>
+          <div class="form-control">
+            <label for="whats-up">What do you want to work on?</label>
+            <textarea name="whats-up" id="whats-up" cols="30" rows="5"
+            ></textarea>
+          </div>
+          <button class="btn--primary" type="submit">Send your message</button>
+        </form>
+      </article>
     </section>
   </main>
 </Layout>
 
 <style lang="scss">
-  .form-control{
+  .contact {
+    margin: var(--size-10) 0;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: var(--size-5);
+    border-radius: var(--radius-2);
+    border: 1px solid var(--gray-7);
+    box-shadow: var(--shadow-2);
+    article {
+      padding: var(--size-3);
+    }
+    article.contact__info {
+      position: relative;
+      background: var(--acc-1);
+      border-top-left-radius: var(--radius-2);
+      border-bottom-left-radius: var(--radius-2);
+      z-index: 1;
+      &:after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(var(--acc-1) 0%, var(--acc-3) 100%);
+        z-index: -1;
+        // border-top-left-radius: var(--radius-round);
+        // border-bottom-right-radius: var(--radius-round);
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      gap: var(--size-3);
+      article.contact__info {
+        border-top-left-radius: var(--radius-2);
+        border-top-rigt-radius: var(--radius-2);
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  .form-control {
     display: flex;
     flex-direction: column;
     margin: var(--size-3) 0;
   }
 
-  input, textarea {
+  button.btn--primary {
+    padding: var(--size-2) var(--size-3);
+    background: var(--acc-2);
+    color: white;
+    border-radius: var(--radius-2);
+    border: 3px solid var(--acc-2);
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background: var(--acc-1);
+      border-color: var(--acc-1);
+    }
+  }
+
+  input,
+  textarea,
+  button {
     margin-top: var(--size-3);
     padding: var(--size-2);
     border: 1px solid var(--gray-7);
@@ -54,9 +128,9 @@ import Layout from '../layouts/Layout.astro';
     border-radius: var(--radius-2);
     background: #1e2a43;
     &:focus {
-      outline-style: dashed;
-      outline-width: 2px;
-      outline-offset: 6px;
+      outline-style: solid;
+      outline-width: 3px;
+      outline-offset: 2px;
       outline-color: var(--acc-1);
     }
   }

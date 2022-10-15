@@ -41,7 +41,7 @@ const featuredProjects = nonDraftProjects.slice(0, 3);
         {featuredProjects.map((project) => <ProjectCard project={project} />)}
       </div>
       <p class="centered">
-        <a href="/work">see more work</a>
+        <a class="a--big" href="/work">see more work</a>
       </p>
     </section>
     <Testimonials>
@@ -85,5 +85,9 @@ const featuredProjects = nonDraftProjects.slice(0, 3);
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
     }
+  }
+
+  .a--big {
+    padding: var(--size-2);
   }
 </style>
