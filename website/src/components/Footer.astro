@@ -6,20 +6,18 @@ const currentYear = new Date().getFullYear();
   <div class="footer">
     <section class="footer__content">
       <ul>
-        <li>Twitter</li>
-        <li>GitHub</li>
-        <li>Blog</li>
-        <li>Merch</li>
+        <li><a href="https://twitter.com/MykalMachon">Twitter</a></li>
+        <li><a href="https://github.com/TinyboxSoftware">GitHub</a></li>
+        <li><a href="https://merch.tinybox.dev">Merch</a></li>
       </ul>
       <ul>
-        <li>Home</li>
-        <li>Work</li>
-        <li>Contact</li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/work">Work</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
     </section>
     <section class="footer__bottom">
-      <p>&copy; {currentYear} Mykal Machon</p>
-      <small class="byline">built with 💖 and 👨‍💻</small>
+      <p>&copy; {currentYear} Mykal Machon, <br />built with 💖 and 👨‍💻</p>
     </section>
   </div>
 </footer>
@@ -35,6 +33,17 @@ const currentYear = new Date().getFullYear();
   .footer {
     padding: var(--size-5) var(--size-3);
     width: 100%;
+
+    a {
+      padding: 0;
+      text-decoration: underline;
+      &:hover, &:focus{
+        text-decoration: none;
+        background: none;
+        outline-color: var(--gray-1);
+        background: none;
+      }
+    }
 
     .footer__content {
       display: grid;

@@ -74,9 +74,26 @@ const { content } = Astro.props;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--size-3);
+        @media screen and (max-width: 768px){
+          grid-template-columns: 1fr;
+          gap: var(--size-1);
+        }
       }
       .work {
         line-height: 2em;
+      }
+      .tag-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: var(--size-3);
+        li {
+          padding: var(--size-1) var(--size-3);
+          background: #505dff;
+          color: white;
+          display: inline-block;
+          border-radius: var(--radius-round);
+        }
       }
     </style>
   </body>
