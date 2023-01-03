@@ -24,6 +24,7 @@ const { title } = Astro.props;
     />
     <!-- stop flickity.js resources -->
     <MainHead title={title} />
+    <slot name="inside-head" />
   </head>
   <body>
     <div class="site-container">
