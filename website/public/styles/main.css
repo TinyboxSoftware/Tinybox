@@ -135,7 +135,6 @@ h3 {
 a {
   color: #505dff;
   text-decoration: none;
-  padding: 0 var(--size-1);
 }
 
 a:hover,
